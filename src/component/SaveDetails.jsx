@@ -11,7 +11,7 @@ function Details() {
   const [currentId, setCurrentId] = useState();
 
   const fetchData = async () => {
-    const res = await axios.get("http://localhost:3000/postapi/getData");
+    const res = await axios.get("https://redux-backend-vmxx.onrender.com/postapi/getData");
     setShowModel(true);
     setismodel(res.data);
     console.log(res.data);
@@ -31,7 +31,7 @@ function Details() {
     try {
       console.log("Updated Data:", Editform);
       const res = await axios.put(
-        `http://localhost:3000/postapi/update/${currentId}`,
+        `https://redux-backend-vmxx.onrender.com/postapi/update/${currentId}`,
         Editform
       );
       console.log("res", res);
@@ -44,7 +44,7 @@ function Details() {
 
   const handleDelete = async(id) =>{
    try {
-    const res = await axios.delete(`http://localhost:3000/postapi/delete/${id}`)
+    const res = await axios.delete(`https://redux-backend-vmxx.onrender.com/postapi/delete/${id}`)
     fetchData()
     alert("Data deleted successfully?")
     

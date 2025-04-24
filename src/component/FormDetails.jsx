@@ -34,7 +34,7 @@ function App() {
   // const handleSubmit = async (e) => {
   //   e.preventDefault();
   //   try {
-  //     const res = await axios.post("http://localhost:3000/postapi/postData",formData);
+  //     const res = await axios.post("https://redux-backend-vmxx.onrender.com/postapi/postData",formData);
   //     setFormData(res)
   //     const newErrors = validateForm();
   //     if (Object.keys(newErrors).length === 0) {
@@ -51,7 +51,7 @@ function App() {
     const newErrors = validateForm();
     if (Object.keys(newErrors).length === 0) {
       try {
-        const res = await axios.post("http://localhost:3000/postapi/postData", formData);
+        const res = await axios.post("https://redux-backend-vmxx.onrender.com/postapi/postData", formData);
         dispatch(setUserDetails(formData)); // or res.data if you're returning user data
         navigate("/details");
         // Optionally reset form
